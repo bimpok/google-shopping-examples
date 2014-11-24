@@ -43,6 +43,7 @@ product_id = args.product_id
 
 try:    
     #Read in the private key.  PEM key created from Developer Console P12 key using Open SSL.
+    #P12 key doesn't seem to be supported by PyCrypto 2.6.1, need to swith to PEM key.
     with open("[Your PEM Key].pem") as f:
         private_key = f.read()
 
